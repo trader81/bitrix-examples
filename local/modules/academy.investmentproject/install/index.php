@@ -62,7 +62,7 @@ final class academy_investmentproject extends CModule
     private function installEntities(): void
     {
         Application::getConnection()->executeSqlBatch(
-            File::getFileContents(Path::combine(__DIR__, 'mysql/install.sql'))
+            File::getFileContents(Path::combine(__DIR__, 'sql/install.sql'))
         );
     }
 
@@ -225,7 +225,7 @@ final class academy_investmentproject extends CModule
     private function uninstallEntities(): void
     {
         Application::getConnection()->executeSqlBatch(
-            File::getFileContents(Path::combine(__DIR__, 'mysql/uninstall.sql'))
+            File::getFileContents(Path::combine(__DIR__, 'sql/uninstall.sql'))
         );
     }
 }
